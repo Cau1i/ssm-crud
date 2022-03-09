@@ -1,0 +1,5 @@
+org\example\controller\BookController.class
+org\example\mapper\BookMapper.class
+org\example\pojo\Books.class
+org\example\service\BookServiceImpl.class
+org\example\service\BookService.class
