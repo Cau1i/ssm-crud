@@ -15,7 +15,6 @@
             margin: 100px auto;
             text-align: center;
             line-height: 38px;
-            background: deepskyblue;
             border-radius: 4px;
         }
     </style>
