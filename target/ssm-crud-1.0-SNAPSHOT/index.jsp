@@ -15,14 +15,14 @@
             margin: 100px auto;
             text-align: center;
             line-height: 38px;
-            border-radius: 4px;
+                border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
 <h3>
-    <a href="${pageContext.request.contextPath}/book/allBook">点击进入列表页</a>
+    <a href="${pageContext.request.contextPath}/book/allBook">点击进入列表�?</a>
 </h3>
 </body>
 </html>

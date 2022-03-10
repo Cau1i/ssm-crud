@@ -15,7 +15,7 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small>书籍列表 —— 显示所有书籍</small>
+                    <small>书籍列表 —�?? 显示�?有书�?</small>
                 </h1>
             </div>
         </div>

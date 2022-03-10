@@ -28,12 +28,13 @@ public class BookController {
 
     @RequestMapping("/toAddBook")
     public String toAddPaper() {
+        System.out.println("toAddBook");
         return "addBook";
     }
 
     @RequestMapping("/addBook")
     public String addPaper(Books books) {
-        System.out.println(books);
+        System.out.println("addBook" + books);
         bookService.addBook(books);
         return "redirect:/book/allBook";
     }
@@ -41,14 +42,14 @@ public class BookController {
     @RequestMapping("/toUpdateBook")
     public String toUpdateBook(Model model, int id) {
         Books books = bookService.queryBookById(id);
-        System.out.println(books);
-        model.addAttribute("book",books );
+        System.out.println("toUpdateBook" + books);
+        model.addAttribute("book", books);
         return "updateBook";
     }
 
     @RequestMapping("/updateBook")
     public String updateBook(Model model, Books book) {
-        System.out.println(book);
+        System.out.println("updateBook" + book);
         bookService.updateBook(book);
         Books books = bookService.queryBookById(book.getBookID());
         model.addAttribute("books", books);
