@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.UserMapper">
+    <!--增加一个User-->
+    <!--    int addUser(User user);    -->
+    <insert id="addUser">
+        insert into ssmbuild.user(userName,passord) values (#{userName}, #{passord})
+    </insert>
+
+    <!--更新User-->
+    <!--    int updateUser(User user);    -->
+    <update id="updateUser">
+        update ssmbuild.user set userName = #{userName},password = #{password} where userID = #{userID}
+    </update>
+
+    <!--根据user查询,返回一个User-->
+    <!--    User queryUserById(int id);    -->
+    <select id="queryUserByUser" resultType="User">
+        select * from ssmbuild.user where userName = #{userName} and password = #{password}
+    </select>
+
+    <!--查询全部User-->
+    <!--    List<User> queryAllUser();    -->
+    <select id="queryAllUser" resultType="User">
+        SELECT * from ssmbuild.user
+    </select>
+</mapper>

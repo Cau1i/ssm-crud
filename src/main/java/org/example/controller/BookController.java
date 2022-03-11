@@ -20,7 +20,6 @@ public class BookController {
 
     @RequestMapping("/allBook")
     public String list(Model model) {
-        System.out.println("--->allBook");
         List<Books> list = bookService.queryAllBook();
         model.addAttribute("list", list);
         return "allBook";
