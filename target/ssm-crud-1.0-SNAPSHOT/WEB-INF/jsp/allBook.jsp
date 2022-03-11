@@ -15,7 +15,9 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small>书籍列表 —�?? 显示�?有书�?</small>
+                    <small>书籍列表 —— 显示所有书籍</small>
+                    <small>${username}</small>
+                    <small><a href="${pageContext.request.contextPath}/user/goOut">注销</a> </small>
                 </h1>
             </div>
         </div>
@@ -48,7 +50,8 @@
                         <td>${book.getBookCounts()}</td>
                         <td>${book.getDetail()}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a> |
+                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a>
+                            |
                             <a href="${pageContext.request.contextPath}/book/del/${book.getBookID()}">删除</a>
                         </td>
                     </tr>

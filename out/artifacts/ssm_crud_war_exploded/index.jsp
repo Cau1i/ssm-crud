@@ -1,32 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=GBK" pageEncoding="GBK" %>
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>é¦–é¡µ</title>
+    <title>Ê×Ò³</title>
     <script src="${pageContext.request.contextPath}/static/js/jquery-3.6.0.js"></script>
-    <script>
-        function username() {
-            $.post({
-                url: "${pageContext.request.contextPath}}/login",
-                data: {"username": $("#username").val},
-                success: function (data, status) {
-                    console.log("data" + data);
-                    console.log("status" + status);
-                }
-            })
-        }
-
-        function password() {
-            $.post({
-                url: "${pageContext.request.contextPath}}/login",
-                data: {"password": $("#password").val},
-                success: function (data, status) {
-                    console.log("data" + data);
-                    console.log("status" + status);
-                }
-            })
-        }
-    </script>
     <style type="text/css">
         a {
             text-decoration: none;
@@ -40,20 +17,19 @@
             text-align: center;
             line-height: 38px;
             border-radius: 4px;
+            margin: 100px auto;
         }
     </style>
 </head>
 <body>
 <div class="container-fluid">
     <h3>
-        <a href="${pageContext.request.contextPath}/book/allBook">ç‚¹å‡»è¿›å…¥åˆ—è¡¨é¡µ</a>
+        <a href="${pageContext.request.contextPath}/book/allBook">µã»÷½øÈëÁĞ±íÒ³</a>
+    </h3>
+    <h3>
+        <a href="${pageContext.request.contextPath}/user/loginPage">µÇÂ½Ò³Ãæ</a>
     </h3>
 
-    <form action="${pageContext.request.contextPath}/user/login" method="post">
-        <p>è´¦å·<input type="text" id="username" onblur="username()" required></p>
-        <p>å¯†ç <input type="text" id="password" onblur="password()" required></p>
-        <p><input type="submit" value="ç™»å½•"></p>
-    </form>
 </div>
 </body>
 </html>

@@ -15,10 +15,10 @@
         update ssmbuild.user set userName = #{userName},password = #{password} where userID = #{userID}
     </update>
 
-    <!--根据user查询,返回一个User-->
+    <!--根据userName查询,返回一个User-->
     <!--    User queryUserById(int id);    -->
-    <select id="queryUserByUser" resultType="User">
-        select * from ssmbuild.user where userName = #{userName} and password = #{password}
+    <select id="queryUserByUserName" resultType="User">
+        select * from ssmbuild.user where userName = #{userName}
     </select>
 
     <!--查询全部User-->

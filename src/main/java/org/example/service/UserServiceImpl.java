@@ -20,8 +20,8 @@ public class UserServiceImpl implements UserService {
         return userMapper.updateUser(user);
     }
 
-    public User queryUserByUser(String userName,String password) {
-        return userMapper.queryUserByUser(userName,password);
+    public User queryUserByUserName(String userName) {
+        return userMapper.queryUserByUserName(userName);
     }
 
     public List<User> queryAllUser() {

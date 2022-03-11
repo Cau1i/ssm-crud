@@ -1,3 +1,4 @@
+org\example\config\MyInterceptor.class
 org\example\controller\UserController.class
 org\example\service\UserServiceImpl.class
 org\example\controller\BookController.class

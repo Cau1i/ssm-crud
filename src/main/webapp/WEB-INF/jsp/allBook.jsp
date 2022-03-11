@@ -8,7 +8,6 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
 <div class="container">
 
     <div class="row clearfix">
@@ -16,6 +15,9 @@
             <div class="page-header">
                 <h1>
                     <small>书籍列表 —— 显示所有书籍</small>
+                    <small>${sessionScope.userLoginInfo}</small>
+                    <small>${aaa}</small>
+                    <small><a href="${pageContext.request.contextPath}/user/goOut">注销</a> </small>
                 </h1>
             </div>
         </div>
@@ -48,7 +50,7 @@
                         <td>${book.getBookCounts()}</td>
                         <td>${book.getDetail()}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a> |
+                            <a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${book.getBookID()}">更改</a>
                             <a href="${pageContext.request.contextPath}/book/del/${book.getBookID()}">删除</a>
                         </td>
                     </tr>
